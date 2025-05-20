@@ -1,0 +1,22 @@
+2025-05-20 06:16:41,867 INFO    MainThread:453885 [wandb_setup.py:_flush():70] Current SDK version is 0.19.11
+2025-05-20 06:16:41,867 INFO    MainThread:453885 [wandb_setup.py:_flush():70] Configure stats pid to 453885
+2025-05-20 06:16:41,867 INFO    MainThread:453885 [wandb_setup.py:_flush():70] Loading settings from /home/avaneuros/.config/wandb/settings
+2025-05-20 06:16:41,867 INFO    MainThread:453885 [wandb_setup.py:_flush():70] Loading settings from /home/avaneuros/dreamcoder-arc/wandb/settings
+2025-05-20 06:16:41,867 INFO    MainThread:453885 [wandb_setup.py:_flush():70] Loading settings from environment variables
+2025-05-20 06:16:41,867 INFO    MainThread:453885 [wandb_init.py:setup_run_log_directory():724] Logging user logs to /home/avaneuros/dreamcoder-arc/wandb/run-20250520_061641-idwr1xln/logs/debug.log
+2025-05-20 06:16:41,867 INFO    MainThread:453885 [wandb_init.py:setup_run_log_directory():725] Logging internal logs to /home/avaneuros/dreamcoder-arc/wandb/run-20250520_061641-idwr1xln/logs/debug-internal.log
+2025-05-20 06:16:41,867 INFO    MainThread:453885 [wandb_init.py:init():852] calling init triggers
+2025-05-20 06:16:41,867 INFO    MainThread:453885 [wandb_init.py:init():857] wandb.init called with sweep_config: {}
+config: {'resume': None, 'iterations': 1, 'enumerationTimeout': 600, 'recognitionTimeout': 0, 'recognitionSteps': None, 'topK': 5, 'pseudoCounts': 30.0, 'aic': 0.1, 'structurePenalty': 0.1, 'arity': 3, 'CPUs': 4, 'cuda': False, 'maximumFrontier': 10, 'reuseRecognition': False, 'useRecognitionModel': True, 'ensembleSize': 1, 'useDSL': True, 'noConsolidation': False, 'testingTimeout': 0, 'testEvery': 1, 'seed': 0, 'activation': 'relu', 'solver': 'python', 'helmholtzRatio': 1.0, 'compressor': 'ocaml', 'matrixRank': None, 'mask': False, 'biasOptimal': False, 'contextual': False, 'taskBatchSize': 25, 'taskReranker': 'default', 'storeTaskMetrics': True, 'rewriteTaskMetrics': False, 'auxiliaryLoss': False, 'addFullTaskMetrics': False, 'evalset': False, 'bothset': False, 'task_isolation': False, 'featureExtractor': <class 'dreamcoder.domains.arc.main.MikelArcNet'>, 'hostname': 'arc-dev2', '_wandb': {'code_path': 'code/ec/arcbin/arc_mikel2.py'}}
+2025-05-20 06:16:41,867 INFO    MainThread:453885 [wandb_init.py:init():893] starting backend
+2025-05-20 06:16:41,867 INFO    MainThread:453885 [wandb_init.py:init():897] sending inform_init request
+2025-05-20 06:16:41,870 INFO    MainThread:453885 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-05-20 06:16:41,870 INFO    MainThread:453885 [wandb_init.py:init():907] backend started and connected
+2025-05-20 06:16:41,872 INFO    MainThread:453885 [wandb_init.py:init():1005] updated telemetry
+2025-05-20 06:16:41,876 INFO    MainThread:453885 [wandb_init.py:init():1029] communicating run to backend with 90.0 second timeout
+2025-05-20 06:16:42,112 INFO    MainThread:453885 [wandb_init.py:init():1104] starting run threads in backend
+2025-05-20 06:16:42,167 INFO    MainThread:453885 [wandb_run.py:_console_start():2573] atexit reg
+2025-05-20 06:16:42,167 INFO    MainThread:453885 [wandb_run.py:_redirect():2421] redirect: wrap_raw
+2025-05-20 06:16:42,168 INFO    MainThread:453885 [wandb_run.py:_redirect():2490] Wrapping output streams.
+2025-05-20 06:16:42,168 INFO    MainThread:453885 [wandb_run.py:_redirect():2513] Redirects installed.
+2025-05-20 06:16:42,169 INFO    MainThread:453885 [wandb_init.py:init():1150] run started, returning control to user process

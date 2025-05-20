@@ -1,0 +1,7 @@
+{"time":"2025-05-20T06:04:56.011165586Z","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/home/avaneuros/dreamcoder-arc/wandb/run-20250520_060456-voxmrq02/logs/debug-core.log"}
+{"time":"2025-05-20T06:04:56.142642904Z","level":"INFO","msg":"created new stream","id":"voxmrq02"}
+{"time":"2025-05-20T06:04:56.142685967Z","level":"INFO","msg":"stream: started","id":"voxmrq02"}
+{"time":"2025-05-20T06:04:56.142714986Z","level":"INFO","msg":"writer: Do: started","stream_id":"voxmrq02"}
+{"time":"2025-05-20T06:04:56.142763002Z","level":"INFO","msg":"handler: started","stream_id":"voxmrq02"}
+{"time":"2025-05-20T06:04:56.14273609Z","level":"INFO","msg":"sender: started","stream_id":"voxmrq02"}
+{"time":"2025-05-20T06:04:56.270362407Z","level":"INFO","msg":"Starting system monitor"}

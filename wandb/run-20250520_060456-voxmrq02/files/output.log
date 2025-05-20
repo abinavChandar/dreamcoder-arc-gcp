@@ -1,0 +1,79 @@
+Run ID: voxmrq02
+Running on train-set
+wandb: WARNING define_metric(summary='best', goal=...) is deprecated and will be removed. Use define_metric(summary='min') or define_metric(summary='max') instead.
+Running EC on arc-dev2 @ 2025-05-20 06:04:56.650967 with 4 CPUs and parameters:
+	 noConsolidation  =  False
+	 solver  =  python
+	 biasOptimal  =  False
+	 contextual  =  False
+	 iterations  =  1
+	 enumerationTimeout  =  600
+	 reuseRecognition  =  False
+	 ensembleSize  =  1
+	 recognitionTimeout  =  0
+	 helmholtzRatio  =  1.0
+	 topK  =  5
+	 topk_use_only_likelihood  =  False
+	 maximumFrontier  =  10
+	 pseudoCounts  =  30.0
+	 aic  =  0.1
+	 structurePenalty  =  0.1
+	 arity  =  3
+	 taskBatchSize  =  25
+	 taskReranker  =  default
+	 storeTaskMetrics  =  True
+	 rewriteTaskMetrics  =  False
+	 evalset  =  False
+	 bothset  =  False
+	 task_isolation  =  False
+	 evaluationTimeout  =  1.0
+	 cuda  =  False
+
+Currently using this much memory: 593420288
+Currently using this much memory: 593420288
+Using a waking task batch of size: 25
+Using experimental Python parallelism with 4 CPUs
+Enumerated         0 programs | 4 jobs | 0 CPUs | 25 tasks | 40.0m CPU rem | 10.0m rem | 0.0 avg lb
+Enumerated    11,555 programs | 4 jobs | 3 CPUs | 25 tasks | 37.9m CPU rem | 9.5m rem | 14.0 avg lb
+Enumerated   106,066 programs | 4 jobs | 3 CPUs | 25 tasks | 15.2m CPU rem | 3.8m rem | 16.0 avg lb
+Enumerated   350,900 programs | 4 jobs | 3 CPUs | 25 tasks | 12.7m CPU rem | 3.2m rem | 17.5 avg lb
+/home/avaneuros/dreamcoder-arc/venv/lib/python3.11/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/avaneuros/dreamcoder-arc/venv/lib/python3.11/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+Enumerated   379,901 programs | 0 jobs | 3 CPUs | 0 tasks | 0.0m CPU rem | 0.0m rem | nan avg lb
+We enumerated this many programs, for each task:
+	 [18179, 19119, 19281, 19181, 18179, 19119, 19281, 19181, 18179, 19119, 19281, 19181, 18179, 19119, 19281, 19181, 18179, 19119, 19281, 19181, 18179, 19119, 19281, 19181, 18179]
+Tasks to first solution: [('00d62c1b', 42)]
+Generative model enumeration results:
+HIT 00d62c1b w/ (lambda (fillobj c4 $0)) ; log prior = -10.552970 ; log likelihood = 0.000000
+Hits 1/25 tasks
+Average description length of a program solving a task: 10.552970 nats
+Generative model average:  0 sec.	median: 0 	max: 0 	standard deviation 0
+Currently using this much memory: 672677888
+Frontiers discovered top down: 1
+Total frontiers: 1
+Using an ensemble size of 1. Note that we will only store and test on the best recognition model.
+Using grammarBuilder GrammarNetwork(
+  (logProductions): Linear(in_features=64, out_features=82, bias=True)
+)
+Currently using this much memory: 674861056
+(ID=0): Training a recognition model from 1 frontiers, 100% Helmholtz, feature extractor MikelArcNet.
+(ID=0): Got 0 Helmholtz frontiers - random Helmholtz training? : True
+(ID=0): Contextual? False
+(ID=0): Bias optimal? False
+(ID=0): Aux loss? False (n.b. we train a 'auxiliary' classifier anyway - this controls if gradients propagate back to the future extractor)
+Sampling 1000 programs from the prior on 4 CPUs...
+Got 842/1000 valid samples.
+(ID=0): Epoch 1 Loss 12.31
+(ID=0): 	vs MDL (w/o neural net) 12.23
+(ID=0): 	1 cum grad steps. 0.6 steps/sec | 81-way aux classif loss 0.6881
+(ID=0): Epoch 50 Loss 11.83
+(ID=0): 	vs MDL (w/o neural net) 12.38
+(ID=0): 	50 cum grad steps. 17.6 steps/sec | 81-way aux classif loss 0.6737
+(ID=0): Epoch 100 Loss 11.64
+(ID=0): 	vs MDL (w/o neural net) 12.85
+(ID=0): 	100 cum grad steps. 24.7 steps/sec | 81-way aux classif loss 0.5911
+(ID=0): Epoch 150 Loss 10.81
+(ID=0): 	vs MDL (w/o neural net) 12.54
+(ID=0): 	150 cum grad steps. 27.4 steps/sec | 81-way aux classif loss 0.5239

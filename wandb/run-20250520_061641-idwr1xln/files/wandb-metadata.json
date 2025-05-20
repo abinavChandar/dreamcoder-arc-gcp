@@ -1,0 +1,43 @@
+{
+  "os": "Linux-6.1.0-34-cloud-amd64-x86_64-with-glibc2.36",
+  "python": "CPython 3.11.2",
+  "startedAt": "2025-05-20T06:16:41.870595Z",
+  "args": [
+    "-c",
+    "4",
+    "-t",
+    "600",
+    "-R",
+    "0",
+    "-i",
+    "1",
+    "--taskBatchSize",
+    "25"
+  ],
+  "program": "/home/avaneuros/dreamcoder-arc/ec/arcbin/arc_mikel2.py",
+  "codePath": "ec/arcbin/arc_mikel2.py",
+  "git": {
+    "remote": "https://github.com/mxbi/dreamcoder-arc.git",
+    "commit": "976cb13f4e27ddf89fc902a3047459b84d5c3a97"
+  },
+  "email": "abinavchandar@gmail.com",
+  "root": "/home/avaneuros/dreamcoder-arc",
+  "host": "arc-dev2",
+  "executable": "/home/avaneuros/dreamcoder-arc/venv/bin/python",
+  "codePathLocal": "ec/arcbin/arc_mikel2.py",
+  "cpu_count": 4,
+  "cpu_count_logical": 8,
+  "disk": {
+    "/": {
+      "total": "105426538496",
+      "used": "57292349440"
+    }
+  },
+  "memory": {
+    "total": "33664823296"
+  },
+  "cpu": {
+    "count": 4,
+    "countLogical": 8
+  }
+}

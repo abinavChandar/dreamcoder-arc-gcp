@@ -1,0 +1,83 @@
+diff --git a/ec/dreamcoder/domains/arc/arcPrimitivesIC2.py b/ec/dreamcoder/domains/arc/arcPrimitivesIC2.py
+index bb16a24..9bca76e 100644
+--- a/ec/dreamcoder/domains/arc/arcPrimitivesIC2.py
++++ b/ec/dreamcoder/domains/arc/arcPrimitivesIC2.py
+@@ -223,7 +223,7 @@ class DSL:
+     def generate_ocaml_primitives(self):
+         primitives = list(self.primitives.values())
+ 
+-        with open("solvers/program.ml", "r") as f:
++        with open("/home/avaneuros/dreamcoder-arc/ec/solvers/program.ml", "r") as f:
+             contents = f.readlines()
+ 
+         start_ix = min([i for i in range(len(contents)) if contents[i][0:7] == '(* AUTO'])
+@@ -243,7 +243,7 @@ class DSL:
+ 
+         contents = contents[0:start_ix+1] + lines + contents[end_ix:]
+ 
+-        with open("solvers/program.ml", "w") as f:
++        with open("/home/avaneuros/dreamcoder-arc/ec/solvers/program.ml", "w") as f:
+             f.write(''.join(contents))
+ 
+ dsl = DSL(typemap, verbose=False)
+@@ -792,7 +792,7 @@ def ic_splitall(g: Grid) -> List[Grid]:
+             ret += [g.newgrid(g.grid[obj], offset=(obj[0].start, obj[1].start)) for obj in objects]
+     return ret
+ 
+-struct8 = np.array([[1, 1, 1], [1, 1, 1], [1, 1, 1]], dtype=np.int)
++struct8 = np.array([[1, 1, 1], [1, 1, 1], [1, 1, 1]], dtype=int)
+ @dsl.primitive
+ def split8(g: Grid) -> List[Grid]:
+     """
+@@ -1251,4 +1251,4 @@ for i in range(1, 10):
+ 
+ print(f"Registered {len(dsl.primitives)} total primitives.")
+ 
+-p = dsl # backwards compatibility
+\ No newline at end of file
++p = dsl # backwards compatibility
+diff --git a/ec/dreamcoder/utilities.py b/ec/dreamcoder/utilities.py
+index 58ed85c..49a8063 100644
+--- a/ec/dreamcoder/utilities.py
++++ b/ec/dreamcoder/utilities.py
+@@ -71,7 +71,7 @@ def curry(fn):
+ class Curried:
+     def __init__(self, f, arguments=None, arity=None):
+         if arity is None:
+-            arity = len(inspect.getargspec(f)[0])
++            arity = len(inspect.getfullargspec(f).args)
+         self.f = f
+         self.arity = arity
+         if arguments is None: arguments = []
+diff --git a/ec/requirements.txt b/ec/requirements.txt
+index 274822a..168087d 100644
+--- a/ec/requirements.txt
++++ b/ec/requirements.txt
+@@ -12,7 +12,6 @@ idna==2.8
+ joblib==0.13.2
+ kiwisolver==1.1.0
+ matplotlib==3.1.0
+-multiprocess==0.70.7
+ nltk==3.4.1
+ numpy==1.16.4
+ pathos==0.2.3
+@@ -22,7 +21,7 @@ ppft==1.6.4.9
+ protobuf==3.8.0
+ psutil==5.6.2
+ pycparser==2.19
+-pygame==1.9.6
++pygame
+ pyparsing==2.4.0
+ pypng==0.0.19
+ python-dateutil==2.8.0
+@@ -30,9 +29,6 @@ pytz==2019.1
+ pyzmq==18.0.1
+ requests==2.22.0
+ scikit-learn==0.21.2
+-scipy==1.3.0
+ sexpdata==0.0.3
+-six==1.12.0
+-torch==1.1.0
+-torchvision==0.3.0
++
+ urllib3==1.25.3

@@ -1,0 +1,63 @@
+Run ID: 0lziemff
+Running on train-set
+[34m[1mwandb[0m: [33mWARNING[0m define_metric(summary='best', goal=...) is deprecated and will be removed. Use define_metric(summary='min') or define_metric(summary='max') instead.
+Running EC on arc-dev2 @ 2025-05-20 05:56:10.436600 with 4 CPUs and parameters:
+	 noConsolidation  =  False
+	 solver  =  python
+	 biasOptimal  =  False
+	 contextual  =  False
+	 iterations  =  1
+	 enumerationTimeout  =  600
+	 reuseRecognition  =  False
+	 ensembleSize  =  1
+	 recognitionTimeout  =  0
+	 helmholtzRatio  =  1.0
+	 topK  =  5
+	 topk_use_only_likelihood  =  False
+	 maximumFrontier  =  10
+	 pseudoCounts  =  30.0
+	 aic  =  0.1
+	 structurePenalty  =  0.1
+	 arity  =  3
+	 taskReranker  =  default
+	 storeTaskMetrics  =  True
+	 rewriteTaskMetrics  =  False
+	 evalset  =  False
+	 bothset  =  False
+	 task_isolation  =  False
+	 evaluationTimeout  =  1.0
+	 cuda  =  False
+
+Currently using this much memory: 593379328
+Currently using this much memory: 593379328
+Using a waking task batch of size: 400
+Using experimental Python parallelism with 4 CPUs
+Enumerated         0 programs | 4 jobs | 0 CPUs | 400 tasks | 40.0m CPU rem | 10.0m rem | 0.0 avg lb
+Enumerated    24,500 programs | 4 jobs | 3 CPUs | 399 tasks | 39.6m CPU rem | 9.9m rem | 12.0 avg lb
+Enumerated   187,595 programs | 4 jobs | 3 CPUs | 394 tasks | 37.1m CPU rem | 9.3m rem | 14.0 avg lb
+Enumerated   367,690 programs | 4 jobs | 3 CPUs | 389 tasks | 36.6m CPU rem | 9.1m rem | 15.0 avg lb
+Traceback (most recent call last):
+  File "/home/avaneuros/dreamcoder-arc/ec/arcbin/arc_mikel2.py", line 118, in <module>
+    for i, result in enumerate(generator):
+  File "/home/avaneuros/dreamcoder-arc/ec/arcbin/../dreamcoder/dreamcoder.py", line 416, in ecIterator
+    topDownFrontiers, times = wake_generative(grammar, wakingTaskBatch,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/avaneuros/dreamcoder-arc/ec/arcbin/../dreamcoder/dreamcoder.py", line 567, in default_wake_generative
+    topDownFrontiers, times = multicoreEnumeration(grammar, tasks,
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/avaneuros/dreamcoder-arc/ec/arcbin/../dreamcoder/enumeration.py", line 226, in multicoreEnumeration
+    message = Bunch(dill.loads(q.get()))
+                               ^^^^^^^
+  File "/usr/lib/python3.11/multiprocessing/queues.py", line 103, in get
+    res = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/multiprocessing/connection.py", line 215, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/multiprocessing/connection.py", line 413, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/multiprocessing/connection.py", line 378, in _recv
+    chunk = read(handle, remaining)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,40 @@
+Run ID: r5nimyfl
+Running on train-set
+wandb: WARNING define_metric(summary='best', goal=...) is deprecated and will be removed. Use define_metric(summary='min') or define_metric(summary='max') instead.
+Running EC on arc-dev2 @ 2025-05-20 06:05:09.693023 with 4 CPUs and parameters:
+	 noConsolidation  =  False
+	 solver  =  python
+	 biasOptimal  =  False
+	 contextual  =  False
+	 iterations  =  1
+	 enumerationTimeout  =  600
+	 reuseRecognition  =  False
+	 ensembleSize  =  1
+	 recognitionTimeout  =  0
+	 helmholtzRatio  =  1.0
+	 topK  =  5
+	 topk_use_only_likelihood  =  False
+	 maximumFrontier  =  10
+	 pseudoCounts  =  30.0
+	 aic  =  0.1
+	 structurePenalty  =  0.1
+	 arity  =  3
+	 taskBatchSize  =  25
+	 taskReranker  =  default
+	 storeTaskMetrics  =  True
+	 rewriteTaskMetrics  =  False
+	 evalset  =  False
+	 bothset  =  False
+	 task_isolation  =  False
+	 evaluationTimeout  =  1.0
+	 cuda  =  False
+
+Currently using this much memory: 591667200
+Currently using this much memory: 591667200
+Using a waking task batch of size: 25
+Using experimental Python parallelism with 4 CPUs
+Enumerated         0 programs | 4 jobs | 0 CPUs | 25 tasks | 40.0m CPU rem | 10.0m rem | 0.0 avg lb
+Enumerated     1,470 programs | 4 jobs | 3 CPUs | 25 tasks | 39.7m CPU rem | 9.9m rem | 12.0 avg lb
+Enumerated    11,555 programs | 4 jobs | 3 CPUs | 25 tasks | 37.1m CPU rem | 9.3m rem | 14.0 avg lb
+Enumerated   106,066 programs | 4 jobs | 3 CPUs | 25 tasks | 14.3m CPU rem | 3.6m rem | 16.0 avg lb
+Enumerated   350,900 programs | 4 jobs | 3 CPUs | 25 tasks | 11.9m CPU rem | 3.0m rem | 17.5 avg lb
