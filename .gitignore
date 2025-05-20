@@ -17,3 +17,27 @@ data/
 output/
 *.egg-info
 *.img
+
+# Ignore Python venv and caches
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs and temporary files
+*.log
+*.out
+*.tmp
+nohup.out
+
+# DreamCoder training outputs
+tmp/
+*.json
+*.pickle
+
+# Jupyter stuff
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
